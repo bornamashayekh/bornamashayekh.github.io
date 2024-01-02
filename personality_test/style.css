@@ -1,0 +1,51 @@
+@font-face{
+    font-family: 'iransans';
+    src: url('iransans.woff2');
+}
+.madar {
+    width: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 510px;
+    margin: auto;
+    box-shadow: 8px 11px 11px 2px #272525;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(92deg, #80318d, #0b2e83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iransans';
+}
+
+.submit {
+    width: 100%;
+    background: linear-gradient(170deg, #43dede, #762062);
+height: 15%;
+border: none;
+color: white;
+font-size: 20px;
+font-weight: 400;
+padding-bottom: 15px;
+transition: 0.9s;
+font-family: 'iransans';
+
+}
+.child{
+
+    height: 85%;
+
+}
+.submit:hover{
+    cursor: pointer;
+    background: linear-gradient(170deg, #3ac5c5, #641c53);
+}
+.soal{
+    padding-top: 40px;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 20px;
+}

@@ -1,0 +1,131 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="madar">
+
+        <div class="child" >
+            <h1 style="padding-top: 15px;" id="soal"> </h1>
+            <br>
+            <div class="soal"  style="padding-top: 25px;" id="javabha"> <label id="gg1" for="g1">15</label>
+                <input type="radio" id="g1" name="gozine">
+                <br>
+            </div>
+            <div class="soal" id="javabha2">
+                <label id="gg2" for="g2">16</label>
+                <input type="radio" id="g2" name="gozine">
+                <br>
+            </div>
+            <div class="soal" id="javabha3">
+                <label id="gg3" for="g3">17</label>
+                <input type="radio" id="g3" name="gozine">
+                <br>
+            </div>
+            <div class="soal" id="javabha4"> 
+                <label id="gg4" for="g4">14</label>
+                <input type="radio" id="g4" name="gozine">
+            </div>
+           
+        </div>
+        <button class="submit" onclick="ejra()" id="submit">ارسال</button>
+    </div>
+     
+    </div>
+    <script>
+
+        var soal = [
+            'بنظرت من چند سالمه؟',
+            'بنظرت زبان مورد علاقم تو برنامه نویسی چیه؟',
+            'بنظرت کشور مورد علاقه من برای مهاجرت چیه؟',
+            'بنظرت تو چه مدرسه ای تحصیل میکنم؟',
+            'بنظرت پرکاربرد ترین زبان برنامه نویسی سال 2023  چه زبانی بود؟'
+        ];
+
+        var soal_aval = document.getElementById("soal");
+        var javab = [
+            ['15', '16', '17', '14', 0],
+            ['پایتون', 'پی اج پی', 'جاوا اسکریپت', 'سی شارپ', 3],
+            ['امریکا', 'استرالیا', 'آلمان', 'کانادا', 4],
+            ['امام محمد باقر (ع)', 'شهید اژه ای', 'شهید همت', 'امام صادق (ع)', 2],
+            ['C++', 'Go', 'پایتون', 'جاوااسکریپت', 4]];
+        var javab_1 = document.getElementById('gg1');
+        var javab_2 = document.getElementById('gg2');
+        var javab_3 = document.getElementById('gg3');
+        var javab_4 = document.getElementById('gg4');
+
+        javab_1.innerText = javab[0][0];
+        javab_2.innerText = javab[0][1];
+        javab_3.innerText = javab[0][2];
+        javab_4.innerText = javab[0][3];
+        soal_aval.innerText = soal[0];
+        var next = 0;
+        var g_dorost = 0;
+        function ejra() {
+
+
+            var g1 = document.getElementById("g1").checked;
+            var g2 = document.getElementById("g2").checked;
+            var g3 = document.getElementById("g3").checked;
+            var g4 = document.getElementById("g4").checked;
+
+
+
+            if (next>5 && g1 == false && g2 == false && g3 == false && g4 == false) {
+                
+                return;
+            }
+            if (next<5 && g1 == false && g2 == false && g3 == false && g4 == false) {
+                alert('لطفا یک گزینه را انتخاب کنید ')
+                return;
+            }
+
+            if (next == 0 && g1 == true) { g_dorost = g_dorost + 1; }
+            if (next == 1 && g3 == true) { g_dorost = g_dorost + 1; }
+            if (next == 2 && g4 == true) { g_dorost = g_dorost + 1; }
+            if (next == 3 && g2 == true) { g_dorost = g_dorost + 1; }
+            if (next == 4 && g4 == true) { g_dorost = g_dorost + 1; }
+
+
+
+
+            next = next + 1;
+            if(next>5){
+                window.location.assign("../index.html");
+            }
+
+            console.log(g_dorost, next);
+            if (next > 4) { 
+                soal_aval.innerText = "جواب صحیح شما:" +" "+ g_dorost.toString() +" "+ "از 5 سوال";
+         document.getElementById("javabha").style.display=" none"; 
+         document.getElementById("javabha2").style.display=" none"; 
+         document.getElementById("javabha3").style.display=" none"; 
+         document.getElementById("javabha4").style.display=" none";
+         document.getElementById("submit").innerText="بازگشت به خانه" 
+         
+            }
+            else {
+                javab_1.innerText = javab[next][0];
+                javab_2.innerText = javab[next][1];
+                javab_3.innerText = javab[next][2];
+                javab_4.innerText = javab[next][3];
+                soal_aval.innerText = soal[next];
+            }
+
+            document.getElementById("g1").checked = false;
+            document.getElementById("g2").checked = false;
+            document.getElementById("g3").checked = false;
+            document.getElementById("g4").checked = false;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
