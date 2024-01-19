@@ -246,7 +246,7 @@ header.fixed nav {
 }
 .burger.open .close-icon {
      display: block;
-    height: 30px;
+   
     width: 30px;
     color: black;
    
