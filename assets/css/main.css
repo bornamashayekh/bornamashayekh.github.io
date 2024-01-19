@@ -2,7 +2,7 @@
   font-family: "Vazir";
   src: url(../fonts/Vazir-Regular.ttf);
 }
-@font-face {
+@font-face {close-icon
   font-family:"snaap";
   src: url(../fonts/Snapp.otf);
 }
@@ -245,9 +245,12 @@ header.fixed nav {
   display: none;
 }
 .burger.open .close-icon {
-  display: block;
-  height: 30px;
-  width: 30px;
+     display: block;
+    height: 30px;
+    width: 30px;
+    color: black;
+   
+    line-height: 2;
 }
 .close-icon svg path {
   fill: var(--color-black);
