@@ -1,0 +1,224 @@
+/* SETTING FONTS */
+@font-face{
+    font-family: 'iransans';
+    src: url('asset/fonts/iransans.woff2');
+}
+@font-face {
+    font-family: 'yekan';
+    font-style: normal;
+    font-weight: 300;
+    src: url(asset/fonts/yekan.eot?#) format('embedded-opentype'),
+        url(asset/fonts/yekan.woff) format('woff'),
+        url(asset/fonts/yekan.ttf) format('truetype');
+} 
+@font-face{
+    font-family: "snaap";
+    src: url(asset/fonts/Snapp.otf);
+}
+@font-face {
+    font-family: 'rezvan';
+    src: url(asset/fonts/Rezvan.ttf);
+}
+body {
+    /* background-color: #f5f5f5; */
+    direction: rtl;
+    background: linear-gradient(9deg, #8f4c98, #6c8acf);
+    text-align: right;
+    font-family: 'iransans';
+/* each rem == 16px , rem is for being responsive  */
+    font-size: 1rem;
+    margin: auto;
+
+}
+
+.unit-converter {
+    background-color: #ffffff98;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.result {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-block {
+    border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+    .unit-converter {
+        padding: 10px;
+    }
+
+    .result {
+        padding: 10px;
+    }
+   
+
+}
+.text-center{
+    font-family: 'snaap';
+    color: #27b8a2;
+    font-size: 2rem;
+}
+#res{
+    --bs-gutter-x: 0;
+}
+.footer{
+    color: #4c544e;
+    /* height: 100px; */
+    margin: auto;
+    /* border-radius: 12px; */
+    /* overflow: hidden; */
+    /* direction: rtl; */
+    /* position: absolute; */
+    /* bottom: 0px; */
+    font-size: 15px;
+    font-weight: bold;
+    /* z-index: -1; */
+    text-align: center;
+    margin-top: 10px;
+    bottom: 0 !important;
+    margin-bottom: 10px; 
+}
+.link-footer{
+    color: #4c544e;
+}
+.link-footer:hover{
+    color: #4c544e;
+    text-decoration: none;
+}
+body {
+	margin: 0;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+}
+
+.hamburger-menu {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 101;
+	transition: color 0.3s ease;
+    outline:none;
+}
+.hamburger-menu:focus{
+    outline: none;
+}
+.menu-content {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+    z-index: 100;
+background-color:rgba(0, 0, 0, 0.89) ;
+	color: white;
+	padding: 20px;
+	overflow: auto;
+	display: none;
+    width:100%;
+    font-size: 1rem;
+}
+
+.menu-content p {
+    padding-top: 40px;
+	margin: 0;
+   
+    text-align: center;
+    margin: auto;
+}
+
+.menu-content.visible {
+	display: block;
+}
+
+.hamburger-menu.active {
+	color: black;
+}
+
+.hamburger-menu.active i {
+	transform: rotate(180deg);
+}
+.table{
+    border-radius: 20px;
+     overflow: hidden;
+      font-size: 0.7rem; 
+      background-color: rgba(255, 255, 255, 0.789);
+}
+/* RESPONSIVING THE EXPLNATION TEXT IN THE BURGER MENU TO BE IN THE MIDDLE AND FONT SIZE*/
+@media screen and (min-width: 700px) {
+    .menu-content p {
+       width: 50%;
+       font-size: 1.5rem;
+    }  
+    .table{
+        font-size: 1rem;
+    }
+body{
+    font-size: 1.5rem;
+}
+.warn{
+    font-size: 0.9rem;
+}
+.text-center{
+    font-size: 3.1rem;
+}
+}
+.container-fluid{
+    margin-top:0.75rem;
+}
+.logo{
+    position: fixed;
+	right: 20px;
+	top: 5px;
+	background-color: transparent;
+	border: none;
+	color: white;
+	cursor: pointer;
+    
+}
+.tr{
+    display: none;
+}
+.warn{
+    color: rgba(255, 0, 0, 0.603);
+    font-size: 0.7rem;
+}
+.link-aiolearn{
+    position: fixed;
+	right: 20px;
+	top: 5px;
+    z-index: 90; 
+    cursor: pointer;
+}
